@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,127 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoverIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oir-1L-oKI">
+                                <rect key="frame" x="354" y="52" width="40" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FPU-Ri-rgo">
+                                <rect key="frame" x="83" y="52" width="263" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-Y3-CI6">
+                                <rect key="frame" x="20" y="137" width="374" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="CFK-Iu-6Ky"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2g2-l0-v7j">
+                                <rect key="frame" x="113" y="542" width="188" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5an-cv-ld2"/>
+                                    <constraint firstAttribute="width" constant="188" id="rz9-MH-xZA"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Convert It!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KlC-zF-pfZ"/>
+                                </connections>
+                            </button>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t9h-JX-s0B">
+                                <rect key="frame" x="20" y="52" width="47" height="29"/>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-Fb-MyB">
+                                <rect key="frame" x="63" y="508" width="288.5" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounding:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM8-3r-Suj">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-1R-dLo">
+                                        <rect key="frame" x="85.5" y="0.0" width="203" height="29"/>
+                                        <segments>
+                                            <segment title="0.0"/>
+                                            <segment title="0.00"/>
+                                            <segment title="0.000"/>
+                                            <segment title="none"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gxt-fd-Cmy"/>
+                                    <constraint firstAttribute="width" constant="288.5" id="mLC-fL-ccZ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Conversion:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIq-Ni-vhI">
+                                <rect key="frame" x="100" y="225" width="214" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEi-Yt-wj9">
+                                <rect key="frame" x="20" y="267" width="374" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cd3-Fb-MyB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2yb-7S-esw"/>
+                            <constraint firstItem="zIq-Ni-vhI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3qY-Wg-hdk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zIq-Ni-vhI" secondAttribute="trailing" constant="100" id="4dl-3U-qY3"/>
+                            <constraint firstItem="zIq-Ni-vhI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="6xH-C3-1eq"/>
+                            <constraint firstItem="2g2-l0-v7j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0p-ea-tSu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oir-1L-oKI" secondAttribute="trailing" constant="20" id="EIs-nJ-fiK"/>
+                            <constraint firstItem="FPU-Ri-rgo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Ftk-SB-6zd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2g2-l0-v7j" secondAttribute="bottom" constant="290" id="GBH-yM-hBl"/>
+                            <constraint firstItem="FPU-Ri-rgo" firstAttribute="leading" secondItem="t9h-JX-s0B" secondAttribute="trailing" constant="8" id="IW7-J5-lbg"/>
+                            <constraint firstItem="cd3-Fb-MyB" firstAttribute="top" secondItem="rEi-Yt-wj9" secondAttribute="bottom" constant="25" id="L1Y-10-dPU"/>
+                            <constraint firstItem="t9h-JX-s0B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="PsD-TQ-gKu"/>
+                            <constraint firstItem="7dM-Y3-CI6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="Qzz-LF-TDQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7dM-Y3-CI6" secondAttribute="trailing" constant="20" id="YKS-cd-ggS"/>
+                            <constraint firstItem="rEi-Yt-wj9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bZt-qK-dwD"/>
+                            <constraint firstItem="t9h-JX-s0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dkA-7k-Z4y"/>
+                            <constraint firstItem="2g2-l0-v7j" firstAttribute="top" secondItem="cd3-Fb-MyB" secondAttribute="bottom" constant="6" id="dxk-lp-6vS"/>
+                            <constraint firstItem="Oir-1L-oKI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="h9u-5Y-jaM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rEi-Yt-wj9" secondAttribute="trailing" constant="20" id="pwu-gX-cgY"/>
+                            <constraint firstItem="Oir-1L-oKI" firstAttribute="leading" secondItem="FPU-Ri-rgo" secondAttribute="trailing" constant="8" id="utr-5X-hrs"/>
+                            <constraint firstItem="zIq-Ni-vhI" firstAttribute="top" secondItem="7dM-Y3-CI6" secondAttribute="bottom" constant="8" id="vco-1e-7nN"/>
+                            <constraint firstItem="7dM-Y3-CI6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xCR-fo-YCK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="formulaPicker" destination="rEi-Yt-wj9" id="KWq-Op-sCz"/>
+                        <outlet property="fromUnitsLabel" destination="Oir-1L-oKI" id="RlN-5e-SkU"/>
+                        <outlet property="resultsLabel" destination="7dM-Y3-CI6" id="Bgo-cj-ySq"/>
+                        <outlet property="userInput" destination="FPU-Ri-rgo" id="UON-CP-RKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="99.776785714285708"/>
         </scene>
     </scenes>
 </document>
