@@ -18,8 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oir-1L-oKI">
-                                <rect key="frame" x="354" y="52" width="40" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oir-1L-oKI">
+                                <rect key="frame" x="354" y="52" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="4cr-Tl-MUR"/>
+                                    <constraint firstAttribute="height" constant="30" id="IlQ-gu-NqX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -134,7 +138,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="decimalSegment" destination="Tsu-1R-dLo" id="HkU-bf-eK4"/>
+                        <outlet property="decimalSegment" destination="Tsu-1R-dLo" id="PJT-BT-Klh"/>
                         <outlet property="formulaPicker" destination="rEi-Yt-wj9" id="KWq-Op-sCz"/>
                         <outlet property="fromUnitsLabel" destination="Oir-1L-oKI" id="RlN-5e-SkU"/>
                         <outlet property="resultsLabel" destination="7dM-Y3-CI6" id="Bgo-cj-ySq"/>
