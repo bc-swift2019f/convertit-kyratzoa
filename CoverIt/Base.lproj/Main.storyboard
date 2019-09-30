@@ -29,6 +29,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="userInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="H5B-aJ-crX"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-Y3-CI6">
                                 <rect key="frame" x="20" y="137" width="374" height="80"/>
@@ -61,6 +64,9 @@
                                     <segment title="-"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="signSegmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="nU5-9J-hWN"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-Fb-MyB">
                                 <rect key="frame" x="63" y="508" width="288.5" height="28"/>
@@ -128,10 +134,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="decimalSegment" destination="Tsu-1R-dLo" id="68T-xh-j2e"/>
+                        <outlet property="decimalSegment" destination="Tsu-1R-dLo" id="HkU-bf-eK4"/>
                         <outlet property="formulaPicker" destination="rEi-Yt-wj9" id="KWq-Op-sCz"/>
                         <outlet property="fromUnitsLabel" destination="Oir-1L-oKI" id="RlN-5e-SkU"/>
                         <outlet property="resultsLabel" destination="7dM-Y3-CI6" id="Bgo-cj-ySq"/>
+                        <outlet property="signSegment" destination="t9h-JX-s0B" id="1qA-eM-zTK"/>
                         <outlet property="userInput" destination="FPU-Ri-rgo" id="UON-CP-RKi"/>
                     </connections>
                 </viewController>
